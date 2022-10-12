@@ -21,8 +21,8 @@ function snack2() {
     document.getElementById('titoloLista').classList.remove('d-none');
     let riga1 = document.createElement('div');
     let riga2 = document.createElement('div');
-    riga1.classList.add('col-6','d-inline');
-    riga2.classList.add('col-6','d-inline');
+    riga1.classList.add('col-6','d-inline','artista');
+    riga2.classList.add('col-6','d-inline','artista');
 
     for (i = 0; i < nomiFamosi.length; i++ ){
         let randomNomi = (Math.floor(Math.random() * nomiFamosi.length));
@@ -40,4 +40,13 @@ function snack2() {
 
     let risultato2 = document.querySelector('.risultato2')
     risultato2.append(riga1,riga2);
+}
+
+const resetLista = document.getElementById('snack2-reset');
+resetLista.addEventListener('click', snack2Reset);
+
+function snack2Reset() {
+    document.getElementById('titoloLista').classList.add('d-none');
+    const snack2Reset = document.querySelector('.risultato2');
+    while ( snack2Reset.firstChild ) snack2Reset.removeChild( snack2Reset.firstChild );
 }
