@@ -48,5 +48,7 @@ resetLista.addEventListener('click', snack2Reset);
 function snack2Reset() {
     document.getElementById('titoloLista').classList.add('d-none');
     const snack2Reset = document.querySelector('.risultato2');
-    while ( snack2Reset.firstChild ) snack2Reset.removeChild( snack2Reset.firstChild );
+    while (snack2Reset.firstChild) {
+        snack2Reset.removeChild(snack2Reset.firstChild);
+    }
 }

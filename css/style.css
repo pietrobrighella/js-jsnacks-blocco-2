@@ -1,8 +1,9 @@
 .risultato {
-    width: 100px;
+    min-width: 100px;
     height: 100px;
     border: 3px solid black;
     line-height: 100px;
     font-size: 4rem;
     margin-right: 25px;
+    padding: 0 10px;
 }
